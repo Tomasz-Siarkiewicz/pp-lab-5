@@ -1,5 +1,7 @@
 import company.beans.Person;
 import company.exceptions.InvalidAgeException;
+import company.implementations.EmailMessenger;
+import company.interfaces.Messenger;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,5 +10,7 @@ public class Main {
         } catch (InvalidAgeException e) {
             System.out.println(e.getMessage());
         }
+        EmailMessenger emailMessenger = new EmailMessenger();
+        emailMessenger.sendMessage("Message from email messenger");
     }
 }
