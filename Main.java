@@ -2,6 +2,7 @@ import company.beans.Person;
 import company.exceptions.InvalidAgeException;
 import company.implementations.EmailMessenger;
 import company.interfaces.Messenger;
+import company.utils.MathUtils;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +12,10 @@ public class Main {
             System.out.println(e.getMessage());
         }
         EmailMessenger emailMessenger = new EmailMessenger();
-        emailMessenger.sendMessage("Message from email messenger");
+
+        int sum = MathUtils.add(3, 6);
+        System.out.println(sum);
+
+        emailMessenger.sendMessage(sum + "");
     }
 }
